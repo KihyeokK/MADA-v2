@@ -5,4 +5,4 @@ import { AppDataSource } from './data-source';
 AppDataSource.initialize();
 
 // Express app listens to port 3001
-app.listen(3001);
+app.listen(process.env.PORT || 3001);
