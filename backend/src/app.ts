@@ -2,6 +2,7 @@
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import * as cors from 'cors';
+import path = require('path');
 
 // Import from other .ts files
 import { api } from './routes/index';
@@ -19,5 +20,13 @@ app.use(cors()); //
 // Routes go here
 // Creating route : https://expressjs.com/en/guide/routing.html
 app.use('/api', api);
+
+// serve react build statically via express
+app.use(express.static(path.join(__dirname, '/../../frontend/', 'build')));
+
+// handing /* enables client side routing
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, '/../../frontend/', 'build', 'index.html'));
+});
 
 export default app;
