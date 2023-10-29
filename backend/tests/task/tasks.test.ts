@@ -1,4 +1,4 @@
-import { describe, it } from '@jest/globals';
+import { describe, it, expect } from '@jest/globals';
 import { TaskEntity } from '../../src/entities/TaskEntity';
 import { AppDataSource } from '../../src/data-source';
 import * as request from 'supertest';

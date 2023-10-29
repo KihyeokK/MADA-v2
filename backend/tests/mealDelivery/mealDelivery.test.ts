@@ -1,4 +1,4 @@
-import { describe, it } from '@jest/globals';
+import { describe, it, expect } from '@jest/globals';
 import { MealDeliveryEntity } from '../../src/entities/MealDeliveryEntity';
 import { AppDataSource } from '../../src/data-source';
 import * as request from 'supertest';
