@@ -8,5 +8,8 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true
-  }
+  },
+  "exclude": [
+    "tests"
+  ]
 }
