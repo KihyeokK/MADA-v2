@@ -5,7 +5,7 @@ import { VolunteerType } from "./Containers/UserContainer";
 import { getCurrentUserId } from "./helper";
 
 // URL to which requests will be sent
-const API_URL = "http://localhost:3001/api";
+const API_URL = "https://h4i-test-cb933ea63e6e.herokuapp.com/api";
 const VOLUNTEER_ID = getCurrentUserId(); // may return null, which occurs when user is not logged in but tries to access other pages.
 
 //Task services

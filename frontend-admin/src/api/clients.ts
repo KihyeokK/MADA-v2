@@ -32,7 +32,7 @@ export const editClient = async (props: { id: number; data: any }) => {
 export const createClient = async (data: any) => {
   const response = await AxiosInstance({
     method: "post",
-    url: "http://localhost:3001/api/clients",
+    url: "https://h4i-test-cb933ea63e6e.herokuapp.com/api/clients",
     data: data,
   });
   return response;

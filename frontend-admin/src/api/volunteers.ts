@@ -29,7 +29,7 @@ export const editVolunteer = async (props: {id: number, data: any}) => {
 export const createVolunteer = async (data: any) => {
     const response = await AxiosInstance({
         method: "post",
-        url: "http://localhost:3001/api/volunteers",
+        url: "https://h4i-test-cb933ea63e6e.herokuapp.com/api/volunteers",
         data: data
     });
     return response
