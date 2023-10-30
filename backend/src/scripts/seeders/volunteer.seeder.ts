@@ -19,6 +19,7 @@ const DEFAULT_VOLUNTEER = {
 
 const generateDefaultVolunteer = async () => {
   const volunteer = (await generateStaffUser()) as any;
+  console.log(DEFAULT_VOLUNTEER.password, " is passed as test volunteer password");
   volunteer.password = await bcrypt.hash(DEFAULT_VOLUNTEER.password, 10);
   volunteer.email = DEFAULT_VOLUNTEER.email;
   volunteer.startDate = faker.date.past(2);
